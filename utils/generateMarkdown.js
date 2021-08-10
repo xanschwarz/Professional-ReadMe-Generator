@@ -3,49 +3,50 @@ let badge;
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
-    license = 'Apache%202.0';
+    badge = 'Apache%202.0';
   }
   else if (license === 'GNU General Public License v3.0') {
-    license = 'GPL%20v3.0';
+    badge = 'GPL%20v3.0';
   }
   else if (license === 'MIT License') {
-    license = 'MIT';
+    badge = 'MIT';
   }
   else if (license === 'BSD 2-Clause "Simplified" License') {
-    license = 'BSD%202--Clause';
+    badge = 'BSD%202--Clause';
   }
   else if (license === 'BSD 3-Clause "New" or "Revised" License') {
-    license = 'BSD%203--Clause';
+    badge = 'BSD%203--Clause';
   }
   else if (license === 'Boost Software License 1.0') {
-    license = 'BSL%201.0';
+    badge = 'BSL%201.0';
   }
   else if (license === 'Creative Commons Zero v1.0 Universal') {
-    license = 'CC0%20v1.0';
+    badge = 'CC0%20v1.0';
   }
   else if (license === 'Eclipse Public License 2.0') {
-    license = 'EPL%202.0';
+    badge = 'EPL%202.0';
   }
   else if (license === 'GNU Affero General Public License v3.0') {
-    license = 'AGPL%20v3.0';
+    badge = 'AGPL%20v3.0';
   }
   else if (license === 'GNU General Public License v2.0') {
-    license = 'GPL%20v2.0';
+    badge = 'GPL%20v2.0';
   }
   else if (license === 'GNU Lesser General Public License v2.1') {
-    license = 'LGPL%20v2.1';
+    badge = 'LGPL%20v2.1';
   }
   else if (license === 'Mozilla Public License 2.0') {
-    license = 'MPL%202.0';
+    badge = 'MPL%202.0';
   }
+  // Last option uses 'else if' to exclude 'None' option.
   else if (license === 'The Unlicense') {
-    license = 'Unlicense';
+    badge = 'Unlicense';
   }
 
   if (license !== 'None') {
     renderedBadge = `
 
-![badge](https://img.shields.io/badge/license-${license}-brightgreen)<br/>`;
+[![badge](https://img.shields.io/badge/license-${badge}-brightgreen)]`;
     return renderedBadge
   }
   else {
@@ -55,16 +56,66 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'Apache License 2.0') {
+    return `(https://choosealicense.com/licenses/apache-2.0/)`;
+  }
+  else if (license === 'GNU General Public License v3.0') {
+    return `(https://choosealicense.com/licenses/gpl-3.0/)`;
+  }
+  else if (license === 'MIT License') {
+    return `(https://choosealicense.com/licenses/mit/)`;
+  }
+  else if (license === 'BSD 2-Clause "Simplified" License') {
+    return `(https://choosealicense.com/licenses/bsd-2-clause/)`;
+  }
+  else if (license === 'BSD 3-Clause "New" or "Revised" License') {
+    return `(https://choosealicense.com/licenses/bsd-3-clause/)`;
+  }
+  else if (license === 'Boost Software License 1.0') {
+    return `(https://choosealicense.com/licenses/bsl-1.0/)`;
+  }
+  else if (license === 'Creative Commons Zero v1.0 Universal') {
+    return `(https://choosealicense.com/licenses/cc0-1.0/)`;
+  }
+  else if (license === 'Eclipse Public License 2.0') {
+    return `(https://choosealicense.com/licenses/epl-2.0/)`;
+  }
+  else if (license === 'GNU Affero General Public License v3.0') {
+    return `(https://choosealicense.com/licenses/agpl-3.0/)`;
+  }
+  else if (license === 'GNU General Public License v2.0') {
+    return `(https://choosealicense.com/licenses/gpl-2.0/)`;
+  }
+  else if (license === 'GNU Lesser General Public License v2.1') {
+    return `(https://choosealicense.com/licenses/lgpl-2.1/)`;
+  }
+  else if (license === 'Mozilla Public License 2.0') {
+    return `(https://choosealicense.com/licenses/mpl-2.0/)`;
+  }
+  else if (license === 'The Unlicense') {
+    return `(https://choosealicense.com/licenses/unlicense/)`;
+  }
+  else {
+    return ``;
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+//  return license section
+  }
+  else {
+    return ``
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 // Conditionals to check if sections are empty and concatenate if they are not?
 function generateMarkdown(data) {
-  let markdown = `# ${data.title}${renderLicenseBadge(data.license)}
+  let markdown = `# ${data.title}${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
 ## Description
 

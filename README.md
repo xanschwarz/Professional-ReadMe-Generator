@@ -1,10 +1,10 @@
-# lorem ipsum
+# lorem
 
-![badge](https://img.shields.io/badge/license-Unlicense-brightgreen)<br/>
+[![badge](https://img.shields.io/badge/license-Apache%202.0-brightgreen)](https://choosealicense.com/licenses/apache-2.0/)
 
 ## Description
 
-lorem ipsum
+lorem
 
 ## Table of Contents
 
@@ -18,29 +18,29 @@ lorem ipsum
 
 ## Installation
 
-lorem ipsum
+lorem
 
 ## Usage
 
-lorem ipsum
+lorem
 
 ## License
 
-The license under which this project is covered is the The Unlicense.
+The license under which this project is covered is the Apache License 2.0.
 
 ## Contributing
 
-lorem ipsum
+lorem
 
 ## Tests
 
-lorem ipsum
+lorem
 
 ## Questions
 
 My contact information:<br/>
-GitHub: [lorem ipsum](https://github.com/lorem ipsum)<br/>
-Email: lorem ipsum<br/>
+GitHub: [lorem](https://github.com/lorem)<br/>
+Email: lorem<br/>
 
 Best practices for reaching me with questions regarding the project:<br/>
-lorem ipsum
+lorem
