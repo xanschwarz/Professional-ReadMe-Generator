@@ -1,5 +1,6 @@
 /* --------------------------------------                            Acceptance Criteria:                            --------------------------------------
 
+
 User input requested and used to generate the following:
 
 1. Project title is displayed as the title of the README.
@@ -15,16 +16,24 @@ on how to reach author with additional questions.
 
 5. Clicking on the Table of Contents links navigates to the corresponding section of the README.
 
+6. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------                              Developer Notes:                              --------------------------------------
+
+1. Eliminate extraneous console.logs. Better comments and check other grading criteria.
+
+2. Validate input each question?
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-// const generateMarkdown = require("./utils/generateMarkdown.js")
+const generateMarkdown = require("./utils/generateMarkdown.js")
 
 // TODO: Create an array of questions for user input
-// Validate input?
 const questions = [
     // Request for project title.
     {
@@ -76,7 +85,7 @@ const questions = [
     {
         type: "input",
         name: "github",
-        message: "Provide examples of how to run any tests you've written for your project.",
+        message: "Provide your GitHub username.",
     },
     // Request for project author's email address.
     {
@@ -92,13 +101,21 @@ const questions = [
     },
 ];
 
-inquirer.prompt(questions);
-
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log('Success!'));
+}
 
 // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+    inquirer
+    .prompt(questions)
+    .then(function (data) {
+        console.log(data);
+        writeToFile("README.md", generateMarkdown(data))
+    })
+};
 
 // Function call to initialize app
-// init();
+init();
