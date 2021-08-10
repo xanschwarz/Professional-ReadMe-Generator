@@ -1,10 +1,10 @@
-# kjhbdas
+# lorem ipsum
 
-![badge](undefined)<br/>
+![badge](https://img.shields.io/badge/license-Apache-2.0-brightgreen)<br/>
 
 ## Description
 
-kjhbdsa
+lorem ipsum
 
 ## Table of Contents
 
@@ -18,29 +18,29 @@ kjhbdsa
 
 ## Installation
 
-kjnbads
+lorem ipsum
 
 ## Usage
 
-kjsdbna
+lorem ipsum
 
 ## License
 
-The license under which this project is covered is the GNU Lesser General Public License v2.1.
+The license under which this project is covered is the Apache License 2.0.
 
 ## Contributing
 
-kjbdsa
+lorem ipsum
 
 ## Tests
 
-kjbdas
+lorem ipsum
 
 ## Questions
 
 My contact information:<br/>
-GitHub: [kjndsa](https://github.com/kjndsa)<br/>
-Email: kjbsda<br/>
+GitHub: [lorem ipsum](https://github.com/lorem ipsum)<br/>
+Email: lorem ipsum<br/>
 
 Best practices for reaching me with questions regarding the project:<br/>
-kjnsad
+lorem ipsum

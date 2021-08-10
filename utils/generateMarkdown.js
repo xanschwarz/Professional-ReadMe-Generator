@@ -42,13 +42,14 @@ function renderLicenseBadge(license) {
     license = 'Unlicense';
   }
 
-  // console.log(license);
-
   if (license !== 'None') {
-    return `https://img.shields.io/badge/license-${license}-brightgreen`
+    renderedBadge = `
+
+![badge](https://img.shields.io/badge/license-${license}-brightgreen)<br/>`;
+    return renderedBadge
   }
   else {
-    return '';
+    return ``
   }
 }
 
@@ -63,11 +64,7 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 // Conditionals to check if sections are empty and concatenate if they are not?
 function generateMarkdown(data) {
-  renderLicenseBadge(data.license);
-
-  const markdown = `# ${data.title}
-
-![badge](${badge})<br/>
+  let markdown = `# ${data.title}${renderLicenseBadge(data.license)}
 
 ## Description
 
