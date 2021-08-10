@@ -1,6 +1,6 @@
 # lorem ipsum
 
-![badge](https://img.shields.io/badge/license-Apache-2.0-brightgreen)<br/>
+![badge](https://img.shields.io/badge/license-Unlicense-brightgreen)<br/>
 
 ## Description
 
@@ -26,7 +26,7 @@ lorem ipsum
 
 ## License
 
-The license under which this project is covered is the Apache License 2.0.
+The license under which this project is covered is the The Unlicense.
 
 ## Contributing
 

@@ -3,40 +3,40 @@ let badge;
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
-    license = 'Apache-2.0';
+    license = 'Apache%202.0';
   }
   else if (license === 'GNU General Public License v3.0') {
-    license = 'GPL-3.0';
+    license = 'GPL%20v3.0';
   }
   else if (license === 'MIT License') {
     license = 'MIT';
   }
   else if (license === 'BSD 2-Clause "Simplified" License') {
-    license = 'BSD-2-Clause';
+    license = 'BSD%202--Clause';
   }
   else if (license === 'BSD 3-Clause "New" or "Revised" License') {
-    license = 'BSD-3-Clause';
+    license = 'BSD%203--Clause';
   }
   else if (license === 'Boost Software License 1.0') {
-    license = 'BSL-1.0';
+    license = 'BSL%201.0';
   }
   else if (license === 'Creative Commons Zero v1.0 Universal') {
-    license = 'CC0-1.0';
+    license = 'CC0%20v1.0';
   }
   else if (license === 'Eclipse Public License 2.0') {
-    license = 'EPL-2.0';
+    license = 'EPL%202.0';
   }
   else if (license === 'GNU Affero General Public License v3.0') {
-    license = 'AGPL-3.0';
+    license = 'AGPL%20v3.0';
   }
   else if (license === 'GNU General Public License v2.0') {
-    license = 'GPL-2.0';
+    license = 'GPL%20v2.0';
   }
   else if (license === 'GNU Lesser General Public License v2.1') {
-    license = 'LGPL-2.1';
+    license = 'LGPL%20v2.1';
   }
   else if (license === 'Mozilla Public License 2.0') {
-    license = 'MPL-2.0';
+    license = 'MPL%202.0';
   }
   else if (license === 'The Unlicense') {
     license = 'Unlicense';
