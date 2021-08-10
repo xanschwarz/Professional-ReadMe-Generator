@@ -15,48 +15,48 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   const markdown = `# ${data.title}
 
-  ## Description
-  
-  ${data.description}
-  
-  ## Table of Contents
-  
-  1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [License](#license)
-  5. [Contributing](#contributing)
-  6. [Tests](#tests)
-  7. [Questions](#questions)
-  
-  ## Installation
-  
-  ${data.installation}
-  
-  ## Usage
-  
-  ${data.usage}
-  
-  ## License
-  
-  The license under which this project is covered is the ${data.license}.
-  
-  ## Contributing
-  
-  ${data.contribution}
-  
-  ## Tests
-  
-  ${data.test}
-  
-  ## Questions
-  
-  My contact information:<br/>
-  GitHub: [${data.github}](https://github.com/${data.github})<br/>
-  Email: ${data.email}<br/>
+## Description
 
-  Best practices for reaching me with questions regarding the project:<br/>
-  ${data.questions}`
+${data.description}
+
+## Table of Contents
+
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributing](#contributing)
+6. [Tests](#tests)
+7. [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+## License
+
+The license under which this project is covered is the ${data.license}.
+
+## Contributing
+
+${data.contribution}
+
+## Tests
+
+${data.test}
+
+## Questions
+
+My contact information:<br/>
+GitHub: [${data.github}](https://github.com/${data.github})<br/>
+Email: ${data.email}<br/>
+
+Best practices for reaching me with questions regarding the project:<br/>
+${data.questions}`
   return markdown;
 }
 
