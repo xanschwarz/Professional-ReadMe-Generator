@@ -20,9 +20,17 @@ This project uses node.js with inquirer to ask the user a variety of questions r
 
 First you need to fork, then clone, the repository to your local, and make sure you're ready to use node.js. After doing so, open the integrated terminal in the Professional-ReadMe_Generator directory and in the command line enter "npm install" to install the necessary dependancies, in this case, inquirer.
 
+![Picture before installation.](assets/images/pre-install.JPG)
+
+![Picture after installation.](assets/images/post-install.JPG)
+
 ## Usage
 
 After installation is complete, enter "node index.js" in the integrated terminal you should still have open in the directory you cloned to. This will run the project and you will be asked a series of questions. Where appropriate you may use html. You can also include images and videos, a quick google search should yield results in how to do so. The result will be a ReadMe.md file in the same folder.
+
+![Picture with prompts and user input.](assets/images/input_output.JPG)
+
+![Picture of result.](assets/images/result.JPG)
 
 ## License
 
