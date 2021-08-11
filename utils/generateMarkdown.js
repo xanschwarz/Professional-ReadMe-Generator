@@ -110,7 +110,7 @@ function renderLicenseSection(license) {
   if (license !== 'None') {
     return `${renderLicenseBadge(license)}${renderLicenseLink(license)}
 
-The license under which this project is covered is the ${license}. Learn more about that license [here]${renderLicenseLink(license)}`
+The license under which this project is covered is the ${license}. Learn more about that license [here]${renderLicenseLink(license)}.`
   }
   else {
     return ``
