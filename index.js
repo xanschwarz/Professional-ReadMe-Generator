@@ -1,39 +1,16 @@
-/* --------------------------------------                            Acceptance Criteria:                            --------------------------------------
-
-
-User input requested and used to generate the following:
-
-1. Project title is displayed as the title of the README.
-
-2. Description, installation instructions, usage information, contribution guidelines, and test instructions information is added to the sections
-of the README entitled Description, Installation, Usage, Contributing, and Tests.
-
-3. License as chosen from a list of options is added near the top of the README and a notice is added to the section of the README entitled License
-that explains which license the application is covered under.
-
-4. GitHub username and email address is added to the section of the README entitled Questions. There is a link to that GitHub profile. There are instructions
-on how to reach author with additional questions.
-
-5. Clicking on the Table of Contents links navigates to the corresponding section of the README.
-
-6. 
-
----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------                              Developer Notes:                              --------------------------------------
 
-1. Eliminate extraneous console.logs. Better comments and check other grading criteria.
-
-2. Validate input each question?
+Possible future changes: In index.js, validate that input was given or confirm user wants to skip section. In generateMarkdown.js, if section is empty
+skip it.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-
-// TODO: Include packages needed for this application
+// Include packages needed for this application.
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js")
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input.
 const questions = [
     // Request for project title.
     {
@@ -101,18 +78,17 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log('Success!'));
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer
     .prompt(questions)
     .then(function (data) {
-        console.log(data);
         writeToFile("README.md", generateMarkdown(data))
     })
 };

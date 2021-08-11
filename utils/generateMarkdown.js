@@ -1,6 +1,8 @@
+// Initialize variable to pass information for the badge to be displayed.
 let badge;
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+// Function that returns a license badge based on which license is chosen by the user.
+// If there is no license, return an empty string.
 function renderLicenseBadge(license) {
   if (license === 'Apache License 2.0') {
     badge = 'Apache%202.0';
@@ -44,6 +46,7 @@ function renderLicenseBadge(license) {
   }
 
   if (license !== 'None') {
+    // Includes spacing to go in the ReadMe and sets up to be used as a link.
     renderedBadge = `
 
 [![badge](https://img.shields.io/badge/license-${badge}-brightgreen)]`;
@@ -54,8 +57,8 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function that returns the license link.
+// If there is no license, return an empty string.
 function renderLicenseLink(license) {
   if (license === 'Apache License 2.0') {
     return `(https://choosealicense.com/licenses/apache-2.0/)`;
@@ -101,19 +104,20 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function that returns the license section of README.
+// If there is no license, return an empty string.
 function renderLicenseSection(license) {
   if (license !== 'None') {
-//  return license section
+    return `${renderLicenseBadge(license)}${renderLicenseLink(license)}
+
+The license under which this project is covered is the ${license}. Learn more about that license [here]${renderLicenseLink(license)}`
   }
   else {
     return ``
   }
 }
 
-// TODO: Create a function to generate markdown for README
-// Conditionals to check if sections are empty and concatenate if they are not?
+// Function to generate markdown for README. Calls license functions as appropriate.
 function generateMarkdown(data) {
   let markdown = `# ${data.title}${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
@@ -139,9 +143,7 @@ ${data.installation}
 
 ${data.usage}
 
-## License
-
-The license under which this project is covered is the ${data.license}.
+## License${renderLicenseSection(data.license)}
 
 ## Contributing
 
