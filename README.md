@@ -18,7 +18,7 @@ This project uses node.js with inquirer to ask the user a variety of questions r
 
 ## Installation
 
-First you need to fork, then clone, the repository to your local, and make sure you're ready to use node.js. After doing so, open the integrated terminal in the Professional-ReadMe_Generator directory and in the command line enter "npm install" to install the necessary dependancies, in this case, inquirer.
+First you need to fork, then clone, the repository to your local, and make sure you're ready to use node.js. After doing so, open the integrated terminal in the Professional-ReadMe_Generator directory and in the command line enter "npm install" to install the necessary dependancies, in this case, inquirer. See the following section for a video of the installation and usage.
 
 ![Picture before installation.](assets/images/pre-install.JPG)
 
@@ -31,6 +31,8 @@ After installation is complete, enter "node index.js" in the integrated terminal
 ![Picture with prompts and user input.](assets/images/input_output.JPG)
 
 ![Picture of result.](assets/images/result.JPG)
+
+[Video of installation and usage.](https://drive.google.com/file/d/1hbns4kSpkWeNREvyRsdPv_6paUmkpyrD/view?usp=sharing)
 
 ## License
 
